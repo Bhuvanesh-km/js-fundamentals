@@ -1,0 +1,50 @@
+.container{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.star-container{
+    padding: 5px;
+    /* border: 3px solid violet; */
+    display: flex;
+    gap: 1rem;
+}
+.star{  
+    font-size: 2rem;
+    cursor: pointer;
+}
+.yellow{
+    color: gold;
+}
+.emoji-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+.emoji{
+    /* visibility: hidden; */
+    display: none;
+    font-size: 2em;
+}
+.slider-container{
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid blueviolet;
+} 
+input{
+    padding: 5px;
+    width: 100%;
+}   
+
+  
+  

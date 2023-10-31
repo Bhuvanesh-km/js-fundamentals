@@ -1,0 +1,1 @@
+function checkIfInstanceOf(obj, classFunction) {}

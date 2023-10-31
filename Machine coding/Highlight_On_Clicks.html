@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at quod illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at x illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+    </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi dolores,
+        rerum repudiandae enim consectetur consequatur quae recusandae,
+        perferendis at quod illum, deleniti similique a eius nulla architecto
+        earum. Iure, deleniti.
+    </p>
+    <script>
+        // WRITE THE JS PROGRAM HERE ====================================================================
+        const paras = document.querySelectorAll("P");
+        const mainBody = document.querySelector("body");
+        for (var i = 0; i < paras.length; i++) {
+        
+        paras[i].addEventListener("click", (e) => {
+            if(e.detail==3){
+                console.log("triple click");
+                colourBackground("white");
+            }
+            else if(e.detail==2){
+                console.log("double click");
+                colourBackground("green");
+            }
+            else if(e.detail==1){
+                console.log("single click");
+                colourBackground("red");
+            }
+        });
+    }
+        function colourBackground(color){
+            for (var i = 0; i < paras.length; i++) {
+                paras[i].style.backgroundColor = color;
+            }
+        }
+        // mainBody.addEventListener("dblclick", (event) => {
+        //     for (var i = 0; i < paras.length; i++) {
+        //         paras[i].style.backgroundColor = "green";
+        //     }
+        // });
+        
+        // mainBody.addEventListener('click', function (x) {
+        //     if (x.detail === 3) {
+        //         for (var i = 0; i < paras.length; i++) {
+        //         paras[i].style.backgroundColor = "white";
+        //     }
+        //     }
+        // });
+    </script>
+</body>
+
+</html>
