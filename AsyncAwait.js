@@ -24,11 +24,11 @@ const fs = require("fs");
 // The Async keyword
 
 // async function sum(a, b) {
-//   return a + b + c;
+//   return a + b;
 // }
 
 // console.log(sum(1, 4));
-// console.log("after");
+// console.log("before");
 
 // The async keyword allows you to define a function that handles asynchronous operations
 // Asynchronous functions execute asynchronously via the event loop (Micro task queue).
@@ -40,6 +40,7 @@ const fs = require("fs");
 //   .catch(function (err) {
 //     console.log("The err msg is: " + err.message);
 //   });
+// console.log("after");
 
 async function sum(a, b) {
   return new Promise(function (res, rej) {
@@ -52,7 +53,7 @@ async function sum(a, b) {
 // // it is acting like a async code but we wrote something which is more like sequencial
 async function printSum() {
   console.log("hi");
-  const sumRes = sum(5, 5); // wait until it is finished.
+  const sumRes = await sum(5, 5); // wait until it is finished.
   console.log(sumRes);
   console.log("bye");
 }

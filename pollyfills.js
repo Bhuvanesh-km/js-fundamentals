@@ -17,13 +17,12 @@
 // }
 
 // testFunction.myCall(obj,100);
- 
+
 //-------------------------------------------------------------------------
 // cars={
 //     model:"BMW",
 //     type:"SUV"
 // }
-
 
 // function printDetails(){
 //     console.log("finally understood pollyfill of call");
@@ -36,7 +35,6 @@
 // }
 
 // printDetails.ourCall(cars);
-
 
 //-----------------------------------------------------------------------
 //pollyfills of Apply
@@ -66,7 +64,6 @@
 //     name: 'John',
 // };
 
-
 // function applyPolyfill(fn, context, args) {
 //     Function.prototype.ourApply=function(obj,parms){
 //         obj.funcRef=this;
@@ -89,7 +86,7 @@
 // function testFunction(...parm){
 //     console.log("this value of obj a is ",this.a);
 //     console.log("value of parm is ", ...parm);
-    
+
 // }
 
 // Function.prototype.myBind=function(obj){
@@ -103,25 +100,28 @@
 
 // binded(10);
 
-
-
 //-----------------------------------------------------------------------
 
-function greet() {
-    return 'Hello, ' + this.name + '!';
-}
+// function greet() {
+//     return 'Hello, ' + this.name + '!';
+// }
 
-const person = {
-    name: 'John',
-};
+// const person = {
+//     name: 'John',
+// };
 
-Function.prototype.customBind=function(object){
-    object.ref=this;
-    return function(...args){
-        return object.ref(...args);
-    };
-}
+// Function.prototype.customBind=function(object){
+//     object.ref=this;
+//     return function(...args){
+//         return object.ref(...args);
+//     };
+// }
 
-const boundFunction = greet.customBind(person);
-const result = boundFunction();
-console.log(result);
+// const boundFunction = greet.customBind(person);
+// const result = boundFunction();
+// console.log(result);
+
+//pollyfill of setTimeout
+mySetTimeout = function (cb, timeInMs) {};
+
+mySetTimeout(greet, 1000);
